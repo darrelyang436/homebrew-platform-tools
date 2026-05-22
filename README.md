@@ -2,8 +2,6 @@
 
 > A Homebrew tap providing `platform-helper` — a minimal macOS CLI for automating common platform engineering tasks.
 
-[![CI](https://github.com/attacker-demo/homebrew-platform-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/attacker-demo/homebrew-platform-tools/actions/workflows/ci.yml)
-
 ---
 
 ## What is this?
