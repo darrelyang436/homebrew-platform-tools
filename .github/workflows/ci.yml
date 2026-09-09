@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Formula/**'
+      - 'scripts/**'
+      - '.github/workflows/ci.yml'
+  pull_request:
+    branches: [main]
+
+jobs:
+  style:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: brew style
+        run: brew style Formula/platform-helper.rb
+
+  audit:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: brew audit
+        run: brew audit --strict --online Formula/platform-helper.rb
+        continue-on-error: true
