@@ -1,0 +1,8 @@
+# Homebrew build artifacts
+*.bottle
+*.bottle.tar.gz
+.DS_Store
+__pycache__/
+*.pyc
+.idea/
+.vscode/

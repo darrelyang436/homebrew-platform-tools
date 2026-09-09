@@ -1,14 +1,17 @@
-.PHONY: lint test install uninstall
+.PHONY: lint test audit install uninstall
 
 lint:
 	brew style Formula/platform-helper.rb
 
+audit:
+	brew audit --strict --online Formula/platform-helper.rb
+
 test:
-	brew test demo/platform-tools/platform-helper
+	brew test darrelyang436/platform-tools/platform-helper
 
 install:
-	brew tap demo/platform-tools "https://github.com/attacker-demo/homebrew-platform-tools.git"
-	brew install demo/platform-tools/platform-helper
+	brew tap darrelyang436/platform-tools
+	brew install darrelyang436/platform-tools/platform-helper
 
 uninstall:
 	bash scripts/uninstall.sh
